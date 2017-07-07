@@ -15,10 +15,10 @@ FOR /R "%synca%" %%I IN (*) DO (
 	REM ECHO !other!
 	IF EXIST !other! (
 		IF %%~tI GTR !~tother! ( 
-			ECHO F | XCOPY /Y %%I !other!
+			ECHO F | XCOPY /Y "%%I" "!other!"
 		)
 	) ELSE (
-		ECHO F | XCOPY /Y %%I !other!
+		ECHO F | XCOPY /Y "%%I" "!other!"
 	)
 )
 
@@ -30,10 +30,10 @@ FOR /R "%syncb%" %%I IN (*) DO (
 	REM ECHO !other!
 	IF EXIST !other! (
 		IF %%~tI GTR !~tother! ( 
-			ECHO F | XCOPY /Y %%I !other!
+			ECHO F | XCOPY /Y "%%I" "!other!"
 		)
 	) ELSE (
-		ECHO F | XCOPY /Y %%I !other!
+		ECHO F | XCOPY /Y "%%I" "!other!"
 	)
 )
 
